@@ -18,7 +18,7 @@ quarterCount = Math.floor(userChange / 25);
 quarterLeftOver = userChange % 25;
 
 if(quarterLeftOver == 0) {
-  console.log();
+
 }
 
 //Dimes
@@ -29,6 +29,7 @@ else {
   if(dimeLeftOver == 0){
 
   }
+
   //Nickles
   else {
     nickleCount = Math.floor(dimeLeftOver / 5);
@@ -37,8 +38,8 @@ else {
     if(nickleLeftOver == 0){
 
     }
+    //Pennies
     else {
-      //Pennies
       pennyCount = Math.floor(nickleLeftOver / 1);
     }
   }
