@@ -1,0 +1,23 @@
+{
+  "name": "codenext-cssi-2018-nyc-kt0122",
+  "version": "1.0.0",
+  "description": "",
+  "main": "change-machine.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeNext-CSSI-NYC/codenext-cssi-2018-nyc-KT0122.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeNext-CSSI-NYC/codenext-cssi-2018-nyc-KT0122/issues"
+  },
+  "homepage": "https://github.com/CodeNext-CSSI-NYC/codenext-cssi-2018-nyc-KT0122#readme",
+  "dependencies": {
+    "random-int": "^1.0.0",
+    "readline-sync": "^1.4.9"
+  }
+}
