@@ -1,6 +1,5 @@
 // Author: Khalil Tavarez
 var x, y, z;
-
 x = 10;
 debugger;
 y = x - 4;

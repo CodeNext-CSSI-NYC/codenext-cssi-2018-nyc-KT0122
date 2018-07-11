@@ -1,10 +1,8 @@
 // 1. Decrease the variable below by 1 using two different shortcuts.
 // Print out its value after each step to make sure it worked.
 let a = 7;
-
-let f = a--;
-console.log(f);
 console.log(a);
+console.log(a -= 1);
 
 // 2. Double the value of the variable below using a multiplication shortcut.
 // Print out its value before and after each step to make sure it worked.
