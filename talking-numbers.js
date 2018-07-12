@@ -171,26 +171,32 @@ function sayTwentyNinety(num) {
   sayNumber(75) → "seventy-five"
 *******************************************************************************/
 function sayNumber(num) {
-  var finalWord;
+  var finalWord = "";
 
   if (num == 0) {
     return "zero";
   }
   //Check if theres a thousands place
   if (num / 1000 >= 1) {
-    finalWord += sayZeroNine(num / 1000) + "-thousand ";
+    finalWord += sayZeroNine(Math.floor(num / 1000)) + "-thousand ";
     num %= 1000;
   }
   //Check if theres a hundreds place
   if (num / 100 >= 1) {
-    finalWord += sayZeroNine(num / 100) + "-hundred";
+    finalWord += sayZeroNine(Math.floor(num / 100)) + "-hundred ";
     num %= 100;
   }
-  //Check if theres a tens place
-  if (num / 10 >= 1) {
-
+  //Check if the last 2 numbers are in the 10 - 19 range
+  if(num >= 10 && num <= 19){
+    return finalWord += sayTenNineteen(Math.floor(num / 10));
   }
-
+  //Check if theres a tens place
+  if (num / 10 > 1) {
+    finalWord += sayTwentyNinety(Math.floor(num / 10)) + " ";
+    num %= 10;
+  }
+finalWord += sayZeroNine(num);
+return finalWord;
 }
 
 
@@ -200,7 +206,9 @@ function sayNumber(num) {
   number in word form.
 *******************************************************************************/
 function run() {
-
+  printGreeting();
+  var num = parseInt(readline.question("Eneter a number between 0 - 9999: "));
+  console.log(sayNumber(num));
 }
 
 // Call the run() function to run the program.
