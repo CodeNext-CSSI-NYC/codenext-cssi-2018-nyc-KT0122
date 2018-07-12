@@ -28,17 +28,14 @@ if(number1 > 0) {
 
 /*
 if(number1 >= number2) {
-  if(number1 >= number3){
+  if(number1 >= number3) {
     console.log(number1 + " is the biggest number");
-  }
-  else {
+  } else {
     console.log(number3 + " is the biggest number");
   }
-}
-else if(number2 >= number3) {
+} else if (number2 >= number3) {
     console.log(number2 + " is the biggest number");
-}
-else {
+} else {
   console.log(number3 + " is the biggest number");
 }
 */
@@ -48,8 +45,7 @@ else {
 /*
 if(number1 % 2 == 0) {
   console.log("This number is even");
-}
-else {
+} else {
   console.log("This number is odd");
 }
 */
@@ -68,8 +64,7 @@ for(var i = 0; i < vowels.length; i++) {
 }
 if(isVowel) {
   console.log("That letter is a vowel")
-}
-else {
+} else {
   console.log("Thats a consonant");
 }
 */
@@ -80,8 +75,7 @@ else {
 /*
 if(year % 4 == 0){
   console.log("That is a leap year");
-}
-else {
+} else {
   console.log("That is an average year");
 }
 */
@@ -92,18 +86,15 @@ else {
 /*
 if(citenzenship >= 9) {
   if(age >= 30) {
-    if(liveInNY){
+    if(liveInNY) {
       console.log("You can run for senator in NY");
-    }
-    else{
+    } else {
       console.log("You cannot be an NY senator");
     }
-  }
-  else{
+  } else {
     console.log("You cannot be an NY senator");
   }
-}
-else{
+} else {
   console.log("You cannot be an NY senator");
 }
 */

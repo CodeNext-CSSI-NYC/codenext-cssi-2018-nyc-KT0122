@@ -10,15 +10,12 @@ userGuess = userGuess.toLowerCase();
 
 roll = randomInt(1,6);
 
-if(oldRoll > roll && userGuess == "higher"){
+if (oldRoll > roll && userGuess == "higher"){
   console.log("You guessed right it was higher");
-}
-else if(oldRoll < roll && userGuess == "lower"){
+} else if (oldRoll < roll && userGuess == "lower"){
   console.log("You guessed right it was lower");
-}
-else if(oldRoll == roll && userGuess == "same"){
+} else if (oldRoll == roll && userGuess == "same"){
   console.log("You guessed right it was the same");
-}
-else {
+} else {
   console.log("You guessed wrong, the new role was " + roll + " and the old roll was " + oldRoll + " and you said " + userGuess);
 }

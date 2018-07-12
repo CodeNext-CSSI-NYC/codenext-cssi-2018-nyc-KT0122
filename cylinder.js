@@ -18,8 +18,7 @@ if (userWant == 1) {
   Volume = (radi ** 2) * height;
   Volume *= Math.PI;
   console.log("The volume of the cylinder with the radi of " + radi + " and the height of " + height + " is " + Volume);
-}
-else {
+} else {
   SurfaceArea = 2 * Math.PI * radi * height;
   SurfaceArea += 2 * Math.PI * (radi ** 2)
   console.log("The surface area of the cylinder with the radi of " + radi + " and the height of " + height + " is " + SurfaceArea);

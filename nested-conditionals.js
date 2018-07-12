@@ -8,21 +8,18 @@ var readline = require("readline-sync");
 var userFoV = readline.question("Type in fruit or veggie: ");
 var userFoV = userFoV.toLowerCase();
 
-if(userFoV == "fruit") {
+if (userFoV == "fruit") {
   var userSpecific = readline.question("Choose a or b: ");
-  if(userSpecific.toLowerCase() == 'a') {
+  if (userSpecific.toLowerCase() == 'a') {
       console.log("Apple");
-  }
-  else {
+  } else {
     console.log("Banana");
   }
-}
-else {
+} else {
   var userSpecific = readline.question("Choose m or p: ");
-  if(userSpecific.toLowerCase() == 'm') {
+  if (userSpecific.toLowerCase() == 'm') {
     console.log("Mushroom");
-  }
-  else {
+  } else {
     console.log("Pepper");
   }
 }
@@ -37,19 +34,16 @@ var userFormula = readline.question("Area or Perimeter: ")
 userShape = userShape.toLowerCase();
 userFormula = userFormula.toLowerCase();
 
-if(userShape == "square") {
-  if(userFormula == "area"){
+if (userShape == "square") {
+  if (userFormula == "area") {
     console.log("s^2");
-  }
-  else {
+  } else {
     console.log("s * 4");
   }
-}
-else {
-  if(userFormula == "perimeter") {
+} else {
+  if (userFormula == "perimeter") {
     console.log("2l + 2h");
-  }
-  else{
+  } else {
     console.log("l * h");
   }
 }
@@ -70,33 +64,31 @@ let totalCost = 0;
 var userFastFood = readline.question("Hello, do you want a value meal? ")
 userFastFood = userFastFood.toLowerCase();
 
-if(userFastFood == "yes") {
+if (userFastFood == "yes") {
   var userValueMeal  = readline.question("Burger($7) or Chicken($6)? ");
   userValueMeal = userValueMeal.toLowerCase();
 
-  if(userValueMeal == "burger"){
+  if (userValueMeal == "burger") {
       totalCost += 7;
-  }
-  else {
+  } else {
     totalCost += 6;
   }
-}
-else {
+} else {
   var burger = readline.question("Burger? ");
   var fries = readline.question("Fries? ");
   var drink = readline.question("drink? ");
   var dessert = readline.question("dessert? ");
 
-  if(burger.toLowerCase() == "yes"){
+  if (burger.toLowerCase() == "yes") {
     totalCost += 4;
   }
-  if(fries.toLowerCase() == "yes"){
+  if (fries.toLowerCase() == "yes") {
     totalCost += 2;
   }
-  if(drink.toLowerCase() == "yes"){
+  if (drink.toLowerCase() == "yes") {
     totalCost += 1;
   }
-  if(dessert.toLowerCase() == "yes"){
+  if (dessert.toLowerCase() == "yes") {
     totalCost += 2;
   }
 }

@@ -19,19 +19,17 @@ const y2 = parseInt(readline.question("What is the y2"));
 
 
 //Slope
-if(userFormula == 1){
+if (userFormula == 1) {
   Slope = (y2 - y1);
   Slope /= (x2 - x1);
   console.log("m = " + Slope);
-}
-//Distance
-else if(userFormula == 2){
+} else if (userFormula == 2) {
+  //Distance
   Distance = ((x2 - x1) ** 2);
   Distance += ((y2 - y1) ** 2);
   Distance = Math.sqrt(Distance);
   console.log("d = " + Distance);
-}
-else {
+} else {
   Midpoint1 = (x1 + x2) / 2;
   Midpoint2 = (y1 + y2) / 2;
   console.log("( " + Midpoint1 + " , " +  Midpoint2 + " )");

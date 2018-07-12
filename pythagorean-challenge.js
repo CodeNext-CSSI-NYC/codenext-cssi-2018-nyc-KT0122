@@ -14,7 +14,6 @@ var c2 = c ** 2;
 
 if(a2 + b2 == c2){
   console.log("Yes this is a Pythagorean Triangle");
-}
-else {
+} else {
   console.log("No this is not a Pythagorean Triangle");
 }
