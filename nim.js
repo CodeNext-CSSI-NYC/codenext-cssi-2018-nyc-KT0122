@@ -105,7 +105,7 @@ function removeStones(currentPlayer, numStonesRemaining) {
   make sure you correctly identify which player won!
 *******************************************************************************/
 function sayWhoWon(currentPlayer) {
-  console.log("Congratulations player" + currentPlayer + " you won");
+  console.log("Congratulations player " + currentPlayer + " you won");
 }
 
 
@@ -125,18 +125,14 @@ function sayWhoWon(currentPlayer) {
   5. Since there are no more stones remaining, say who won.
 *******************************************************************************/
 function run() {
-  //printGreeting();
+  printGreeting();
   var currentPlayer = chooseStartingPlayer();
   var numStonesRemaining = 10;
 
-  printStones(numStonesRemaining);
-
-  while (numStonesRemaining != 0) {
-
-    numStonesRemaining = removeStones(currentPlayer, numStonesRemaining);
-    console.log(numStonesRemaining);
-    printStones(numStonesRemaining);
+  while (numStonesRemaining > 1) {
     currentPlayer = switchPlayer(currentPlayer);
+    printStones(numStonesRemaining);
+    numStonesRemaining = removeStones(currentPlayer, numStonesRemaining);
   }
 
   sayWhoWon(currentPlayer);
