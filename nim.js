@@ -48,7 +48,7 @@ function switchPlayer(currentPlayer) {
 function printStones(numStonesRemaining) {
   var stones = "";
 
-  for (i = 0; i <= numStonesRemaining; i++) {
+  for (i = 1; i <= numStonesRemaining; i++) {
     stones += "0 ";
   }
   console.log(stones);
@@ -76,17 +76,12 @@ function printStones(numStonesRemaining) {
 *******************************************************************************/
 function removeStones(currentPlayer, numStonesRemaining) {
   var stonesToRemove = parseInt(readline.question("Player " + currentPlayer + " how may stones would you like to remove: "));
-  var validStoneCount = true;
+  var validStoneCount = false;
 
-  console.log(stonesToRemove);
-
-  var tooManyStones = (numStonesRemaining < stonesToRemove);
+  var tooManyStones = (numStonesRemaining <= stonesToRemove);
   var invalidStoneCount = (stonesToRemove > 3 || stonesToRemove < 1);
 
-  console.log(tooManyStones);
-  console.log(invalidStoneCount);
-
-  while (validStoneCount) {
+  while (!validStoneCount) {
     if (!tooManyStones && !invalidStoneCount) {
       validStoneCount = true;
     } else {
@@ -96,6 +91,7 @@ function removeStones(currentPlayer, numStonesRemaining) {
       invalidStoneCount = (stonesToRemove > 3 || stonesToRemove < 1);
     }
   }
+
   return numStonesRemaining - stonesToRemove;
 }
 
@@ -136,11 +132,13 @@ function run() {
   printStones(numStonesRemaining);
 
   while (numStonesRemaining != 0) {
-    numStonesRemaining = removeStones(currentPlayer, numStonesRemaining);
 
+    numStonesRemaining = removeStones(currentPlayer, numStonesRemaining);
+    console.log(numStonesRemaining);
     printStones(numStonesRemaining);
     currentPlayer = switchPlayer(currentPlayer);
   }
+
   sayWhoWon(currentPlayer);
 }
 
