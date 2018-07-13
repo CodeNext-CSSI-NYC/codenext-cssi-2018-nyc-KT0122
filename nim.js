@@ -81,8 +81,10 @@ function removeStones(currentPlayer, numStonesRemaining) {
   var tooManyStones = (numStonesRemaining <= stonesToRemove);
   var invalidStoneCount = (stonesToRemove > 3 || stonesToRemove < 1);
 
+  console.log(numberCheck);
+
   while (!validStoneCount) {
-    if (!tooManyStones && !invalidStoneCount) {
+    if ((!tooManyStones && !invalidStoneCount) && numberCheck) {
       validStoneCount = true;
     } else {
       stonesToRemove = parseInt(readline.question("Player " + currentPlayer + " thats an invalid amount of stones try again, rememebr there are only " + numStonesRemaining + " and you can only remove from 1 to 3. "));
