@@ -21,7 +21,7 @@ var c = y % 100;
 var i = Math.floor(c / 4);
 var k = c % 4;
 var r = (32 + 2 * e + 2 * i - h - k) % 7;
-var m = Math.floor((a + 11 * h + 22 * r ) / 451);
+var m = Math.floor((a + 11 * h + 22 * r) / 451);
 var n = Math.floor((h + r - 7 * m + 114) / 31);
 var p = (h + r - 7 * m + 114) % 31;
 

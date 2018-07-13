@@ -17,5 +17,5 @@ console.log("The word " + userWord + " starts with the letter " + userWord.charA
 // 4. Ask the user to enter two numbers, and print out "The average of ___ and ___ is ____", but with the blanks filled in.
 var userNum1 = parseInt(readline.question("Enter a number:"));
 var userNum2 = parseInt(readline.question("Enter a second number:"));
-var average =  (userNum1 + userNum1) / 2;
+var average = (userNum1 + userNum1) / 2;
 console.log("The average of " + userNum1 + " and " + userNum2 + " is " + average);

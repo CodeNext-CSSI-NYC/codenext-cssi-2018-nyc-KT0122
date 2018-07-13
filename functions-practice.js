@@ -35,9 +35,9 @@ function compare(num1, num2) {
 // 3b. Call it three times with three different parameters
 // Make sure to try cases where the first one is bigger, the second one is bigger, and when they are equal.
 // Run your code to make sure it works.
-compare(3,2);
-compare(2,3);
-compare(2,2);
+compare(3, 2);
+compare(2, 3);
+compare(2, 2);
 
 // 4a. Write (declare) a function that takes one parameter called name and
 // returns (not prints out, just returns) the string "Hello ____", with the name in the blank.
@@ -53,7 +53,7 @@ console.log(nameReturn("Esteban"));
 
 // 5a. Write (declare) a function that takes two parameters and
 // returns (not prints out, just returns) the average of the parameters.
-function average(num1, num2){
+function average(num1, num2) {
   return (num1 + num2) / 2;
 }
 

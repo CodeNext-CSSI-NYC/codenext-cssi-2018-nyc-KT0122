@@ -6,7 +6,7 @@ var Distance = 0;
 var Midpoint1 = 0;
 var Midpoint2 = 0;
 
-const userFormula =  parseInt(readline.question("Would you like to find the slope of the line(1), the lenght of the line(2), or the midpoint of the line(3)?"));
+const userFormula = parseInt(readline.question("Would you like to find the slope of the line(1), the lenght of the line(2), or the midpoint of the line(3)?"));
 
 const x1 = parseInt(readline.question("What is the x1"));
 const y1 = parseInt(readline.question("What is the y1"));
@@ -32,5 +32,5 @@ if (userFormula == 1) {
 } else {
   Midpoint1 = (x1 + x2) / 2;
   Midpoint2 = (y1 + y2) / 2;
-  console.log("( " + Midpoint1 + " , " +  Midpoint2 + " )");
+  console.log("( " + Midpoint1 + " , " + Midpoint2 + " )");
 }

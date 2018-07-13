@@ -11,7 +11,7 @@ var userFoV = userFoV.toLowerCase();
 if (userFoV == "fruit") {
   var userSpecific = readline.question("Choose a or b: ");
   if (userSpecific.toLowerCase() == 'a') {
-      console.log("Apple");
+    console.log("Apple");
   } else {
     console.log("Banana");
   }
@@ -65,11 +65,11 @@ var userFastFood = readline.question("Hello, do you want a value meal? ")
 userFastFood = userFastFood.toLowerCase();
 
 if (userFastFood == "yes") {
-  var userValueMeal  = readline.question("Burger($7) or Chicken($6)? ");
+  var userValueMeal = readline.question("Burger($7) or Chicken($6)? ");
   userValueMeal = userValueMeal.toLowerCase();
 
   if (userValueMeal == "burger") {
-      totalCost += 7;
+    totalCost += 7;
   } else {
     totalCost += 6;
   }

@@ -6,8 +6,8 @@
 // makeAbba("What", "Up") → "WhatUpUpWhat"
 
 function makeAbba(a, b) {
-    var finalWord = a;
-    return finalWord += b + b + a;
+  var finalWord = a;
+  return finalWord += b + b + a;
 }
 //console.log(makeAbba("Hi", "Bye"));
 

@@ -4,7 +4,7 @@ var randomInt = require('random-int');
 var userChoice = readline.question("Rock, Paper, or Scissors");
 userChoice = userChoice.toLowerCase();
 
-var rng = randomInt(1,3);
+var rng = randomInt(1, 3);
 var computerChoice = rng;
 
 if (userChoice == "rock") {

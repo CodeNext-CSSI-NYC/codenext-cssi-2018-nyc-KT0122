@@ -22,12 +22,12 @@ console.log(absValue(-2.44) == 2.44);
 // returns true if it is a vowel and false if not.
 
 function isVowel(letter) {
-var vowels  = ['a','e','i','o','u'];
-var checkVowel;
+  var vowels = ['a', 'e', 'i', 'o', 'u'];
+  var checkVowel;
 
-  for(var i = 0; i < vowels.length; i++) {
+  for (var i = 0; i < vowels.length; i++) {
     checkVowel = (letter == vowels[i]);
-    if(checkVowel){
+    if (checkVowel) {
       return checkVowel;
     }
   }
@@ -47,12 +47,11 @@ console.log(isVowel("e") == true);
 // The function should return the converted temperature.
 function convertTemp(temp, conversion) {
   var newTemp;
-  if(conversion == "toC") {
+  if (conversion == "toC") {
     //T(°C) = (T(°F) - 32) × 5/9
-    newTemp = (temp - 32) * (5/9);
+    newTemp = (temp - 32) * (5 / 9);
     return newTemp;
-  }
-  else {
+  } else {
     //T(°F) = T(°C) × 1.8 + 32
     newTemp = (temp * 1.8) + 32;
     return newTemp;
@@ -70,7 +69,7 @@ console.log(convertTemp(86, "toC") == 30);
 // The function should return true or false.
 function isDivisible(num1, num2) {
   divisible = (num1 % num2) == 0;
-  if(divisible) {
+  if (divisible) {
     return true;
   } else {
     return false;

@@ -17,29 +17,24 @@ var pennyCount = 0;
 quarterCount = Math.floor(userChange / 25);
 quarterLeftOver = userChange % 25;
 
-if(quarterLeftOver == 0) {
+if (quarterLeftOver == 0) {
 
-}
-
-//Dimes
-else {
+} else {
+  //Dimes
   dimeCount = Math.floor(quarterLeftOver / 10);
   dimeLeftOver = quarterLeftOver % 10;
 
-  if(dimeLeftOver == 0){
+  if (dimeLeftOver == 0) {
 
-  }
-
-  //Nickles
-  else {
+  } else {
+    //Nickles
     nickleCount = Math.floor(dimeLeftOver / 5);
     nickleLeftOver = dimeLeftOver % 5;
 
-    if(nickleLeftOver == 0){
+    if (nickleLeftOver == 0) {
 
-    }
-    //Pennies
-    else {
+    } else {
+      //Penny
       pennyCount = Math.floor(nickleLeftOver / 1);
     }
   }
@@ -50,4 +45,4 @@ console.log("Quarters:" + quarterCount);
 console.log("Dimes:" + dimeCount);
 console.log("Nickles:" + nickleCount);
 console.log("Pennies:" + pennyCount);
-console.log("ThAnK yOU fOr LeTTinM cOunT yOuR chAngE");
+console.log("ThAnK yOU fOr LeTTing Me cOunT yOuR chAngE");

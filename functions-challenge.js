@@ -35,7 +35,7 @@ makes10(1, 9) → true
 
 // Declare your function here
 function makes10(num1, num2) {
-  if (num1 == 10 || num2 == 10){
+  if (num1 == 10 || num2 == 10) {
     return true;
   } else if ((num1 + num2) == 10) {
     return true;
@@ -100,7 +100,7 @@ function testMakes10() {
   console.log("makes10(1, 9) → true ... your result: " + makes10(1, 9));
   console.log("makes10(10, 1) → true ... your result: " + makes10(10, 1));
   console.log("makes10(10, 10) → true ... your result: " + makes10(10, 10));
-  console.log("makes10(8, 2) → true ... your result: " +	makes10(8, 2));
+  console.log("makes10(8, 2) → true ... your result: " + makes10(8, 2));
   console.log("makes10(8, 3) → false ... your result: " + makes10(8, 3));
   console.log("makes10(10, 42) → true	... your result: " + makes10(10, 42));
   console.log("makes10(12, -2) → true	... your result: " + makes10(12, -2));
@@ -123,4 +123,4 @@ function testParrotTrouble() {
 
 // testSumDouble();
 // testMakes10();
- testParrotTrouble();
+testParrotTrouble();

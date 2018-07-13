@@ -38,7 +38,7 @@ frontAgain("ed") → true
 *******************************************************************************/
 function frontAgain(str) {
   if (str.length >= 2) {
-    var strFront = str.substring(0,2);
+    var strFront = str.substring(0, 2);
     return str.endsWith(strFront);
   }
   return false;
@@ -66,15 +66,15 @@ withoutX2("Hi") → "Hi"
 *******************************************************************************/
 function withoutX2(str) {
   var firstOccurence = str.indexOf("x");
-  if(firstOccurence == 0){
+  if (firstOccurence == 0) {
     str = str.substring(1);
     var secondOccurence = str.indexOf("x");
-    if(secondOccurence == 0) {
+    if (secondOccurence == 0) {
       str = str.substring(1);
     }
   } else if (firstOccurence == 1) {
-     var temp = str.charAt(0);
-     str = temp + str.substring(2);
+    var temp = str.charAt(0);
+    str = temp + str.substring(2);
   }
   return str;
 }

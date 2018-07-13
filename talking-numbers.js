@@ -23,37 +23,37 @@ function printGreeting() {
   sayZeroNine(13) → ""
 *******************************************************************************/
 function sayZeroNine(num) {
-    switch (num) {
-      case 1:
-        return "one";
-        break;
-      case 2:
-        return "two";
-        break;
-      case 3:
-        return "three";
-        break;
-      case 4:
-        return "four";
-        break;
-      case 5:
-        return "five";
-        break;
-      case 6:
-        return "six";
-        break;
-      case 7:
-        return "seven";
-        break;
-      case 8:
-        return "eight";
-        break;
-      case 9:
-        return "nine";
-        break;
-      default:
-        return "";
-      }
+  switch (num) {
+    case 1:
+      return "one";
+      break;
+    case 2:
+      return "two";
+      break;
+    case 3:
+      return "three";
+      break;
+    case 4:
+      return "four";
+      break;
+    case 5:
+      return "five";
+      break;
+    case 6:
+      return "six";
+      break;
+    case 7:
+      return "seven";
+      break;
+    case 8:
+      return "eight";
+      break;
+    case 9:
+      return "nine";
+      break;
+    default:
+      return "";
+  }
 }
 
 
@@ -68,39 +68,39 @@ function sayZeroNine(num) {
   sayTenNineteen(25) → ""
 *******************************************************************************/
 function sayTenNineteen(num) {
-    switch (num) {
-      case 10:
-        return "Ten";
-        break;
-      case 11:
-        return "eleven";
-        break;
-      case 12:
-        return "twelve";
-        break;
-      case 13:
-        return "thirteen";
-        break;
-      case 14:
-        return sayZeroNine(4) + "teen";
-        break;
-      case 15:
-        return sayZeroNine(5) + "teen";
-        break;
-      case 16:
-        return sayZeroNine(6) + "teen";
-        break;
-      case 17:
-        return sayZeroNine(7) + "teen";
-        break;
-      case 18:
-        return sayZeroNine(8) + "teen";
-        break;
-      case 19:
-        return sayZeroNine(9) + "teen";
-        break;
-      default:
-        return "";
+  switch (num) {
+    case 10:
+      return "Ten";
+      break;
+    case 11:
+      return "eleven";
+      break;
+    case 12:
+      return "twelve";
+      break;
+    case 13:
+      return "thirteen";
+      break;
+    case 14:
+      return sayZeroNine(4) + "teen";
+      break;
+    case 15:
+      return sayZeroNine(5) + "teen";
+      break;
+    case 16:
+      return sayZeroNine(6) + "teen";
+      break;
+    case 17:
+      return sayZeroNine(7) + "teen";
+      break;
+    case 18:
+      return sayZeroNine(8) + "teen";
+      break;
+    case 19:
+      return sayZeroNine(9) + "teen";
+      break;
+    default:
+      return "";
   }
 }
 
@@ -116,34 +116,34 @@ function sayTenNineteen(num) {
   sayTwentyNinety(1) → ""
 *******************************************************************************/
 function sayTwentyNinety(num) {
-    switch (num) {
-      case 2:
-        return "twnety";
-        break;
-      case 3:
-        return "thirty";
-        break;
-      case 4:
-        return "fourty";
-        break;
-      case 5:
-        return "fifty";
-        break;
-      case 6:
-        return "sixty";
-        break;
-      case 7:
-        return "seventy";
-        break;
-      case 8:
-        return "eighty";
-        break;
-      case 9:
-        return "ninety";
-        break;
-      default:
-        return "";
-    }
+  switch (num) {
+    case 2:
+      return "twnety";
+      break;
+    case 3:
+      return "thirty";
+      break;
+    case 4:
+      return "fourty";
+      break;
+    case 5:
+      return "fifty";
+      break;
+    case 6:
+      return "sixty";
+      break;
+    case 7:
+      return "seventy";
+      break;
+    case 8:
+      return "eighty";
+      break;
+    case 9:
+      return "ninety";
+      break;
+    default:
+      return "";
+  }
 }
 
 
@@ -187,7 +187,7 @@ function sayNumber(num) {
     num %= 100;
   }
   //Check if the last 2 numbers are in the 10 - 19 range
-  if(num >= 10 && num <= 19){
+  if (num >= 10 && num <= 19) {
     return finalWord += sayTenNineteen(Math.floor(num / 10));
   }
   //Check if theres a tens place
@@ -195,8 +195,8 @@ function sayNumber(num) {
     finalWord += sayTwentyNinety(Math.floor(num / 10)) + " ";
     num %= 10;
   }
-finalWord += sayZeroNine(num);
-return finalWord;
+  finalWord += sayZeroNine(num);
+  return finalWord;
 }
 
 

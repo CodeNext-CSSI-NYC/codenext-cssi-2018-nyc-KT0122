@@ -16,13 +16,13 @@ else {
 var rng = Math.random();
 var result = "temp";
 
-if(rng < .5) {
+if (rng < .5) {
   result = "HEADS";
 } else {
   result = "TAILS";
 }
 
-if(result == userChoice) {
+if (result == userChoice) {
   console.log("You won player");
 } else {
   console.log("The computer won");

@@ -13,13 +13,13 @@ console.log(91 % 13 == 0);
 //False
 
 // 2. What is the result when the q divided by r is rounded to the nearest integer?
-console.log(Math.round(q/r));
+console.log(Math.round(q / r));
 //2
 
 // 3. Is the product of p and r greater than q squared? (The answer should be either true or false)
 var product = p * r;
 var qSquared = Math.pow(2, q);
-if(product > qSquared)
+if (product > qSquared)
   console.log(true);
 else
   console.log(false);

@@ -17,13 +17,13 @@ var MP1 = readline.question("4.Final Fantasy ");
 
 var ToF2 = readline.question("True or False. Kingdom Hearts 3 is finally coming out in 2019 after a decade of waiting ");
 
-if(ToF1){
+if (ToF1) {
   score++;
 }
-if(MP1 == 4){
+if (MP1 == 4) {
   score++;
 }
-if(ToF2) {
+if (ToF2) {
   score++;
 }
 
