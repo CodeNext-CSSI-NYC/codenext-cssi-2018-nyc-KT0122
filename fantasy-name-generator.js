@@ -1,4 +1,4 @@
-// Author: FirstName LastName
+// Author: Khalil Tavarez
 let readline = require("readline-sync");
 
 /******************************************************************************
@@ -26,6 +26,8 @@ function getNewFirstName(firstName, lastName) {
 function getNewLastName(momMaidenName, cityBorn) {
   var newLName = momMaidenName.substring(0, 2);
   newLName += cityBorn.substring(0, 3);
+
+  return newLName;
 }
 
 
@@ -41,7 +43,7 @@ function getTitle(lastName, dreamCar) {
   var title = "";
   var temp = lastName.substring(lastName.length - 3);
 
-  for (var i = title.length; i != -1; i--)
+  for (var i = temp.length; i != -1; i--)
     title += temp.charAt(i);
 
   return title + dreamCar;
@@ -57,7 +59,7 @@ function getTitle(lastName, dreamCar) {
   title, " of ", and the name of the street they live on.
 *******************************************************************************/
 function getHonorific(title, street) {
-  var honorific = title.concatenate(" of ", street);
+  var honorific = title.concat(" of ", street);
   return honorific;
 }
 
@@ -74,7 +76,19 @@ function getHonorific(title, street) {
   to hold the results, and display it for the user to see.
 *******************************************************************************/
 function run() {
+  var firstName = readline.question("What is your first name? ");
+  var lastName = readline.question("What is your last name? ");
+  var momMaidenName = readline.question("What is your mom's maiden name? ");
+  var cityBorn = readline.question("What city were you born in? ");
+  var dreamCar = readline.question("What is your dream car? ");
+  var street = readline.question("What street do you live on? ");
 
+  var title = getTitle(lastName, dreamCar);
+  var fantasyName = getNewFirstName(firstName, lastName);
+  fantasyName += " " + getNewLastName(momMaidenName, cityBorn);
+  fantasyName += ", The " + getHonorific(title, street);
+
+  console.log("Your fantasy name is  " + fantasyName);
 }
 
 
