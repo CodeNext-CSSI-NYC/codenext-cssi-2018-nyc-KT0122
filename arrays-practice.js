@@ -121,6 +121,11 @@ framed(["Hello", "World", "in", "a", "frame"]);
 // Then go through the array and convert each word to pig latin.
 function pigLatin(text) {
   var arr = text.split(" ");
+  var finalSentence = "";
+  for (int i = 0; i < arr.length; i++)[
+    var currentWord = arr[i];
+
+  ]
 }
 
 
