@@ -43,11 +43,11 @@ function isGameOver(tracker) {
 function render(tracker) {
   // Your code here
   console.log(tracker.join(" "));
-  var str = "";
-  for (var i = 0; i < tracker.length; i++) {
-    str += tracker[i] + " ";
-  }
-  console.log(str);
+  // var str = "";
+  // for (var i = 0; i < tracker.length; i++) {
+  //   str += tracker[i] + " ";
+  // }
+  // console.log(str);
 }
 
 // This function returns a shuffled array of numbers, like [2, 3, 1, 3, 0, 2, 0, 1]
@@ -120,14 +120,16 @@ function play() {
   console.clear();
   // Your code here
   let gameOver = isGameOver(tracker);
-  render(tracker);
-
   while (!gameOver) {
+    render(tracker);
+
     numGuesses++;
     let index1 = parseInt(readline.question("Which is the first position you want to reveal: ") - 1);
     let index2 = parseInt(readline.question("Which is the second position you want to reaveal: ") - 1);
-    if (index1 > numMatches || index2 || numMatches) {
+    console.clear();
 
+    if (index1 > (numMatches * 2) || index2 > (numMatches * 2)) {
+      console.log(" ");
     } else {
       let current1 = tracker[index1];
       let current2 = tracker[index2];
@@ -138,11 +140,11 @@ function play() {
         tracker[index1] = current1;
         tracker[index2] = current2;
       }
-      isGameOver(tracker);
+      gameOver = isGameOver(tracker);
     }
     console.clear();
   }
-  console.log(numGuesses);
+  console.log("Guesses: " + numGuesses);
 
 }
 

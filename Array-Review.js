@@ -11,7 +11,6 @@
 // placing a number inside square brackets (e.g. arr[3], though 3 is wrong).
 // Print out the second-to-last value in the array again, but this time,
 // use the length property and subtraction (e.g. arr[arr.length + 3], though +3 is wrong).
-
 function one() {
   var arr = [1, 2, 3, 4, 5];
   var secondValue = arr[1];
@@ -31,7 +30,6 @@ function one() {
 // Do NOT just print out the whole array with a command like console.log(arr).
 // Make sure you actually print out each item in the array one at a time.
 // What if there were 100 items in the array? 1000?
-
 function twoA() {
   var arr = ["This", "Is", "Brilliant", "But I", "Prefer This"];
   console.log(arr[0]);
@@ -47,7 +45,6 @@ function twoA() {
 // Add a few items to the array one at a time using push.
 // What if you needed to add 100 items to the array, or 1000?
 // Hopefully these examples illustrate how helpful for loops can be.
-
 function twoB() {
   var arr = [];
   arr.push("Tfw");
@@ -96,7 +93,6 @@ function three() {
 // PEAR
 // plum
 // PLUM
-
 function four() {
   var foods = ["apple", "orange", "pear", "plum"];
   for (var i = 0; i < foods.length; i++) {
@@ -120,7 +116,6 @@ function four() {
 // 2: Seattle
 // 3: LA
 // 4: San Diego
-
 function five() {
   var cities = ["New York", "Saint Louis", "Detroit", "Rochester", "LA"]
   for (var i = 0; i < cities.length; i++) {
@@ -141,7 +136,6 @@ function five() {
 // At the end, print out the new array.
 // Assuming your original array was [2,6,4,3,1,7] ...
 // When it is done running, you should see something like [4, 36, 16, 9, 1, 49]
-
 function six() {
   var squares = [2, 4, 6, 7, 8, 9];
   var squared = [];
@@ -166,7 +160,6 @@ function six() {
 // At the end, print out both the original and new array.
 // Assuming your original array was [2,6,4,3,1,7] ...
 // When it is done running, you should see [7, 1, 3, 4, 6, 2] (it was reversed!)
-
 function seven() {
   var arr = [2, 4, 6, 7, 8, 9];
   var reversed = [];
@@ -186,7 +179,6 @@ function seven() {
 // Print out the str
 // For example, if they type in 4, and then type in c, a, k, e when asked
 // Then at the end it should just say "cake"
-
 function eight() {
   var arr = [];
   var readline = require("readline-sync");
@@ -238,36 +230,33 @@ function ten() {
   var deck = [];
 
   for (var i = 1; i <= 13; i++) {
-    for (var x = 0; i < 4; x++) {
-      var str = "";
-      if (i == 1) {
-        str += "A"
-      } else if (i >= 2 && i <= 10) {
-        str += i;
-      } else if (i == 11) {
-        str += "Jack";
-      } else if (i == 12) {
-        str += "Queen";
-      } else if (i == 13) {
-        str += "King";
-      }
+    var str = "";
+    if (i == 1) {
+      str += "Ace";
+    } else if (i >= 2 && i <= 10) {
+      str += i;
+    } else if (i == 11) {
+      str += "Jack";
+    } else if (i == 12) {
+      str += "Queen";
+    } else if (i == 13) {
+      str += "King";
+    }
 
-      if (x == 0) {
-        str += "clubs ";
-      } else if (x == 1) {
-        str += "spades";
+    for (var x = 1; x <= 4; x++) {
+      if (x == 1) {
+        deck.push(str + " Hearts")
       } else if (x == 2) {
-        str += "clubs";
-      } else {
-        str += "diamonds";
+        deck.push(str + " Spades");
+      } else if (x == 3) {
+        deck.push(str + " Hearts");
+      } else if (x == 4) {
+        deck.push(str + " Diamonds");
       }
     }
-    var tempDeck = [];
-    tempDeck = str.split(" ");
-    console.log(tempDeck);
-    deck = deck.concat(tempDeck);
   }
   console.log(deck.length);
+  console.log(deck);
 }
 
 ten();
