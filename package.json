@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/CodeNext-CSSI-NYC/codenext-cssi-2018-nyc-KT0122#readme",
   "dependencies": {
+    "object-equal": "^1.0.0",
     "random-int": "^1.0.0",
     "readline-sync": "^1.4.9",
     "shuffle-array": "^1.0.1"

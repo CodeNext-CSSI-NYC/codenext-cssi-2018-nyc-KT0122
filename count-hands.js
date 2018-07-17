@@ -56,7 +56,7 @@ for (var i = 0; i < playerHand.length; i++) {
   var check = playerHand[i];
   check = check[0];
 
-  for () {
+  for (var x = 0; x < ) {
 
   }
 }
