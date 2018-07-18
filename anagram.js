@@ -108,11 +108,35 @@ function existingAnagram(str) {
 // You will need to create a counter object for each word in the array.
 // And then figure out a way to check if it has at least 4 E's.
 function fourEs() {
-  for (var i = 0; i < words.length)
+  var arr = [];
+  for (var i = 0; i < words.length; i++) {
+    let currentWord = letterCounter(words[i]);
+    if ("e" in currentWord) {
+      if (currentWord["e"] == 4) {
+        arr.push(words[i]);
+      }
+    }
+  }
+  console.log(arr);
 }
+
+// fourEs();
 
 // Bonus
 // 6. Find all words that are the same forwards and backwards.
 // In order to do this, you will need to write a separate function that determines
 // if a word is the same forwards and backwards, and call that each time.
 // Another way of saying this is that the word is the same as its reverse.
+function ForwardAndBack(str) {
+  str = str.toLowerCase();
+  let strReversed = str.split("");
+  strReversed.reverse();
+  strReversed = strReversed.join("");
+  if (strReversed == str) {
+    console.log(str + " is the same both forwards and backwards");
+  } else {
+    console.log(str + " is not the same both forwards and backwards");
+  }
+}
+
+// ForwardAndBack("Alula");
