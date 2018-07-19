@@ -24,11 +24,13 @@ function makeUserTable() {
     }
     table.push(row);
   }
-  console.log(table);
+  // console.log(table);
   return table;
 }
 
 printTable(makeUserTable());
+console.log();
+niceTable(makeUserTable());
 
 // Console.log the array to make sure it looks like what you expect
 // For 3x3 it is: [ [ 1, 2, 3 ], [ 2, 4, 6 ], [ 3, 6, 9 ] ]
@@ -66,7 +68,16 @@ function printTable(table) {
 
 function niceTable(table) {
   for (var i = 0; i < table.length; i++) {
-
+    let newLine = "";
+    for (var j = 0; j < table[i].length; j++) {
+      let tempStr = "" + table[i][j];
+      if (tempStr.length != 1) {
+        newLine += " " + tempStr;
+      } else {
+        newLine += "  " + tempStr;
+      }
+    }
+    console.log(newLine);
   }
 }
 
