@@ -51,6 +51,7 @@ function movePiece(disk, tower, targetTower) {
       }
     }
   }
+
   //Check around the chosen position
   for ()
 }

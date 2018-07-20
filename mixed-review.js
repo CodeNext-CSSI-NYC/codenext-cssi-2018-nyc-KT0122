@@ -202,7 +202,7 @@ function fibonacci(num) {
 // These tests should print true when you are done
 // console.log(fibonacci(5).pop() == 8);
 // console.log(fibonacci(8).pop() == 34);
-
+// console.log(fibonacci(20));
 
 
 
@@ -253,4 +253,4 @@ function waitFor24() {
   }
 }
 // Call it and make sure it works
-waitFor24();
+// waitF  or24();

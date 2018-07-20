@@ -103,6 +103,7 @@ function hasThreeOfAKind(obj) {
   }
   return false;
 }
+
 // You can test this out by calling #2 and #3 above to create counter objects,
 // or you can just create your own and pass them in. For example, you could call
 // hasThreeOfAKind({1:3, 2:1, 6:1}) and make sure it says true.
@@ -121,6 +122,7 @@ function hasFourOfAKind(obj) {
   }
   return false;
 }
+
 // You can test this out by calling #2 and #3 above to create counter objects,
 // or you can just create your own and pass them in. For example, you could call
 // hasFourOfAKind({1:3, 2:1, 6:1}) and make sure it says false and make another
@@ -137,6 +139,7 @@ function hasYahtzee(obj) {
   }
   return false;
 }
+
 // You can test this out by calling #2 and #3 above to create counter objects,
 // or you can just create your own and pass them in. For example, you could call
 // hasYahtzee({1:5}) and make sure it says true.
@@ -152,6 +155,7 @@ function hasFullHouse(obj) {
   }
   return false;
 }
+
 // You can test this out by calling #2 and #3 above to create counter objects,
 // or you can just create your own and pass them in. For example, you could call
 // hasFullHouse({1:3, 5:2}) and make sure it says true.
@@ -177,6 +181,7 @@ function hasSmallStraight(obj) {
     return false;
   }
 }
+
 // You can test this out by calling #2 and #3 above to create counter objects,
 // or you can just create your own and pass them in. For example, you could call
 // hasFullHouse({3:1, 4:1, 5:2, 6:1}) and make sure it says true.
@@ -206,6 +211,7 @@ function hasLargeStraight(obj) {
     return false;
   }
 }
+
 // You can test this out by calling #2 and #3 above to create counter objects,
 // or you can just create your own and pass them in. For example, you could call
 // hasFullHouse({2:1, 3:1, 4:1, 5:1, 6:1}) and make sure it says true.

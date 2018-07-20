@@ -9,12 +9,17 @@ let wordsToPickFrom = words.filter(word => word.length == 7 || word.length == 8)
 
 // Let's make a hangman game. Step 1 is to randomly choose a word from wordsToPickFrom
 // Use the random-int package and pick a random index from wordsToPickFrom
-function chooseWord() = {
+function chooseWord() {
   return wordsToPickFrom[randomInt(wordsToPickFrom.length)];
 }
 
 function isGameOver(line) {
-  if (line.findIndex())
+  for (var i = 0; i < line.length; i++) {
+    if (line[i] == "_") {
+      return false;
+    }
+  }
+  return true;
 }
 
 // We will use an array to track the letters that the user has guessed so far.
@@ -61,7 +66,50 @@ function renderLine(line) {
 // After you fill in the letters in the tracker you should call the render
 // function to print out the array.
 
-let
+function run() {
+  let guessesSoFar = [];
+  let guessCount = 0;
+  let solution = "";
+  let totalGuesses = 0;
+
+  let twoPlayerPrompt = readline.question("Will there 2 players yes or no? ").toLowerCase();
+  let twoPlayer = twoPlayerPrompt == "yes";
+
+  if (twoPlayer == true) {
+    solution = readline.question("Other player please input the solution: ").toLowerCase();
+    totalGuesses = parseInt(readline.question("And the total allowed guesses for the game: "));
+    console.clear();
+  } else {
+    solution = chooseWord();
+    totalGuesses = 18;
+  }
+
+  let currentGame = createArray(solution);
+  let gameOver = isGameOver(currentGame);
+  let playerLost = false;
+  while (!gameOver && !playerLost) {
+    let userGuess = readline.question("Please input a letter: ").toLowerCase();
+    currentGame = checkGuess(userGuess, currentGame, solution)
+    gameOver = isGameOver(currentGame);
+    guessesSoFar.push(userGuess);
+    guessCount++;
+
+    console.log();
+    console.log("letters guessed so far: " + guessesSoFar);
+    if (guessCount == totalGuesses) {
+      playerLost = true;
+    } else {
+      console.log("You have " + (totalGuesses - guessCount) + " left to guess the word");
+    }
+  }
+  if (playerLost) {
+    console.log("You have exceded the maximum amount of guesses allowed, the solution was " + solution + ", these were all the letters you guessed:");
+    console.log(guessesSoFar);
+  } else {
+    console.log("You won and it only took you " + guessCount + ", these were the letters you guessed: ");
+    console.log(guessesSoFar);
+  }
+}
 
 // This should keep happening until all the letters have been revealed.
 // To check that, you should write a function called isRevealed that takes in an
@@ -76,3 +124,5 @@ let
 // 3. You could make it more of a 2-player game by allowing someone else to type
 // in the secret word at the beginning rather than selecting it randomly.
 // If you do that, make sure to clear the console, so the guesser cannot see what was typed.
+
+run();
