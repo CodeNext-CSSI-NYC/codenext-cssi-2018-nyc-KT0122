@@ -1,3 +1,4 @@
+let readline = require("readline-sync");
 // Read about how to play the game: https://en.wikipedia.org/wiki/Connect_Four#Gameplay
 // Try playing the game: https://www.mathsisfun.com/games/connect4.html
 
@@ -12,13 +13,16 @@
 // Do this using 2 nested for loops that run 6 and 7 times.
 // Created a render function that takes this array and prints it out nicely.
 function createBoard() {
-  let board = [
+  var board = [
     []
   ];
-  for (row = 0; row < 7; row++) {
-    for (col = 0; col < 7; col++) {
-      board[row][col] = "_";
+
+  for (let row = 0; row < 7; row++) {
+    let tempArr = [];
+    for (let col = 0; col < 7; col++) {
+      tempArr[col] = "_";
     }
+    board[row] = tempArr;
   }
   return board;
 }
@@ -90,7 +94,18 @@ let almostFullArray = [
 // is even a single _, then it should return false. Now, use this function to stop
 // asking the user which column they want to play in when the grid is full.
 
-
+function checkBoard(board) {
+  let fullCols = 0;
+  for (var i = 0; i < board[0].length; i++) {
+    let tempBool = isColumnFull(board, targetColumn);
+    if (tempBool) {
+      fullCols++;
+    }
+  }
+  if (fullCols == 7) {
+    return true;
+  } else return false;
+}
 
 // 4. The next step is to alternate which player's turn it is. It might be easier
 // to call the players "X" and "O", so that their names match what they are
